@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Kontakt z nami">
+    <meta name="keywords" content="miasto, kontakt">
+    <title>Kontakt</title>
+</head>
+<body>
+    <header>
+        <h1>Kontakt</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="strona1.html">Strona 1</a></li>
+                <li><a href="strona2.html">Strona 2</a></li>
+                <li><a href="https://www.google.com/maps/place/Siedziba+FerrariPeek/@51.0448002,17.0752855,15z/data=!4m2!3m1!1s0x0:0x8b6f212d62a62446?sa=X&ved=2ahUKEwiBt5KlxICCAxW2KBAIHdMSDVMQ_BJ6BAhKEAA&ved=2ahUKEwiBt5KlxICCAxW2KBAIHdMSDVMQ_BJ6BAhTEAs">Nasza siedziba</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Kontakt - FC Kopenhaga</h2>
+
+            <h2>Dane kontaktowe</h2>
+            <p>Adres: ul. Stadionowa 123, Kopenhaga, Dania</p>
+            <p>Telefon: +45 123 456 789</p>
+            <p>Email: <a href="mailto:kontakt@fckopenhaga.dk">kontakt@fckopenhaga.dk</a></p>
+
+            <h2>Odnośniki</h2>
+            <ul>
+                <li><a href="https://www.fck.dk/files/pdf/klubfck_oversigt.pdf" download="klubfck_oversigt.pdf">Pobierz plik 1</a></li>
+                <li><a href="copenhagen_guide.pdf" download="copenhagen_guide.pdf">Pobierz plik 2</a></li>
+                <li><a href="mailto:biuro@fckopenhaga.dk">Napisz do nas</a></li>
+            </ul>
+            <a href="https://www.fck.dk/en"><img src="klub_logo.png" height="300" width="300" alt="Kliknij na obrazek" onclick="alert('Przeniesiesz się na strony FC Kopenhagi')"></a>
+            <h2>Formularz kontaktowy</h2>
+            <form action="przetwarzanie_formularza.php" method="post">
+                <label for="imie">Imię:</label>
+                <input type="text" id="imie" name="imie"><br>
+
+                <label for="nazwisko">Nazwisko:</label>
+                <input type="text" id="nazwisko" name="nazwisko"><br>
+
+                <label for="email1">Adres email:</label>
+                <input type="text" id="email1" name="email"><br>
+
+                <label for="zapytanie">Zapytanie:</label>
+                <textarea id="zapytanie" name="zapytanie" rows="4" cols="50" maxlength="200"></textarea><br>
+
+                <label for="kategoria">Kategoria:</label>
+                <select id="kategoria" name="kategoria">
+                    <option value="Ogólne">Ogólne</option>
+                    <option value="Bilety">Bilety</option>
+                    <option value="Sponsorstwo">Sponsorstwo</option>
+                </select><br>
+
+                <label>Preferowane kontakty:</label><br>
+                <input type="radio" id="telefon" name="kontakt" value="telefon">
+                <label for="telefon">Telefon</label><br>
+                <input type="radio" id="email2" name="kontakt">
+                <label for="email2">Email</label><br>
+
+                <label>Wybierz tematy newslettera:</label><br>
+                <input type="checkbox" id="sport" name="newsletter" value="sport">
+                <label for="sport">Sport</label><br>
+                <input type="checkbox" id="wydarzenia" name="newsletter" value="wydarzenia">
+                <label for="wydarzenia">Wydarzenia</label><br>
+
+                <input type="submit" value="Wyślij">
+                <input type="reset" value="Wyczyść">
+            </form>
+        </section>
+    </main>
