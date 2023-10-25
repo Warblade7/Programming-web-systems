@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Kontakt z nami">
+    <meta name="keywords" content="miasto, kontakt">
+    <title>Kontakt</title>
+
+    <style>
+        .form-row {
+            display: flex;
+        }
+    
+    
+        .form-row .info {
+            color: #888; /* Kolor informacji o formacie */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kontakt</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="strona1.html">Strona 1 - FC Kopenhaga</a></li>
+                <li><a href="strona2.html">Strona 2 - Atrakcje</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <section>
+            <h2>Wprowadź swoje dane osobowe:</h2>
+            <form action="przetwarzanie_formularza.php" method="post">
+                <div class="form-row">
+                    <label for="imie">Imię:</label>
+                    <input type="text" id="imie" name="imie" autocomplete="given-name" autofocus>
+                    <div class="info">Format: Imię i nazwisko</div>
+                </div>
+        
+                <div class="form-row">
+                    <label for="nazwisko">Nazwisko:</label>
+                    <input type="text" id="nazwisko" name="nazwisko" autocomplete="family-name" required>
+                    <div class="info">Format: Imię i nazwisko</div>
+                </div>
+
+                <div class="form-row">
+                    <label for="miesiac-urodzin">Miesiąc urodzin:</label>
+                    <input list="miesiace" id="miesiac-urodzin" name="miesiac-urodzin" autocomplete="bday-month">
+                    <div class="info">Format: Miesiąc urodzin</div>
+                    <datalist id="miesiace">
+                        <option value="Styczeń">
+                        <option value="Luty">
+                        <option value="Marzec">
+                        <option value="Kwiecień">
+                        <option value="Maj">
+                        <option value="Czerwiec">
+                        <option value="Lipiec">
+                        <option value="Sierpień">
+                        <option value="Wrzesień">
+                        <option value="Październik">
+                        <option value="Listopad">
+                        <option value="Grudzień">
+                    </datalist>
+                </div>
+        
+                <div class="form-row">
+                    <label for="email">Adres email:</label>
+                    <input type="email" id="email" name="email" autocomplete="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" required>
+                    <div class="info">Format: example@example.com</div>
+                </div>
+        
+                <div class="form-row">
+                    <label for="telefon">Telefon:</label>
+                    <input type="tel" id="telefon" name="telefon" autocomplete="tel" pattern="\+\d{2}\s\d{3}-\d{3}-\d{3}" placeholder="+XX XXX-XXX-XXX">
+                    <div class="info">Format: +XX XXX-XXX-XXX</div>
+                </div>
+        
+                <input type="submit" name="submit" value="Wyślij">
+                <input type="reset" name="reset" value="Wyczyść">
+            </form>
+        </section>
+        <section>
+            <h2>Dodatkowe informacje o użytkowniku:</h2>
+            <form action="przetwarzanie_formularza2.php" method="post">
+                <label for="kolor">Ulubiony kolor:</label>
+                <input type="color" id="kolor" name="kolor" placeholder="Wybierz kolor"><br>
+
+                <label for="miesiac">Ulubiony miesiąc:</label>
+                <input type="month" id="miesiac" name="miesiac" placeholder="Wybierz miesiąc"><br>
+
+                <label for="zakres">Przedział wartości:</label>
+                <input type="range" id="zakres" name="zakres" min="0" max="100" step="5" placeholder="Przesuń suwak"><br>
+
+                <label for="szukaj">Wyszukaj:</label>
+                <input type="search" id="szukaj" name="szukaj" placeholder="Wyszukaj coś"><br>
+
+                <label for="url">Strona WWW:</label>
+                <input type="url" id="url" name="url" placeholder="http://www.example.com"><br>
+
+                <input type="submit" name="submit" value="Wyślij">
+                <input type="reset" name="reset" value="Wyczyść">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
