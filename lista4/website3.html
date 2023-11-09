@@ -184,5 +184,29 @@
         <input type="submit" class="submit-button" value="Submit">
     </form>
 
+    <input type="checkbox" id="checkbox1" class="pseudo-class-checkbox">
+    <label for="checkbox1">Check me</label>
+
+    <a href="#" class="pseudo-class-link" onclick="alert('Link clicked!')">Click me</a>
+
+    <div class="pseudo-classes-demo">
+        <p>Paragraph 1</p>
+        <p class="only-child-demo">Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+        <p class="only-child-demo">Paragraph 5</p>
+    </div>
+    
+    <div class="required-demo">
+        <label for="requiredInput">Required Input:</label>
+        <input type="text" id="requiredInput" class="required-input-demo" required>
+    </div>
+    
+    <a href="#target-demo">Go to Target</a>
+    
+    <div id="target-demo">
+        <p>This is the default state.</p>
+        <p id="targeted-paragraph">This is the targeted paragraph.</p>
+    </div>
 </body>
 </html>

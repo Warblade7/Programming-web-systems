@@ -213,3 +213,117 @@ nav ul ul li:hover > ul {
 .sub-submenu:hover > ul {
     display: block;
 }
+
+button:active {
+    background-color: darkorange;
+}
+
+.required-input:required {
+    border: 2px solid red;
+}
+
+.submit-button:disabled {
+    background-color: grey;
+    color: white;
+}
+
+form:empty {
+    border: 2px dashed blue;
+}
+
+.required-input:enabled {
+    background-color: lightgreen;
+}
+
+section:first-of-type {
+    border: 2px solid purple;
+}
+
+li:hover {
+    color: gold;
+}
+
+#Definitions li:nth-child(odd) {
+    background-color: lightblue;
+}
+
+#Definitions li:nth-child(even) {
+    background-color: lightcoral;
+}
+
+#pseudoclass-section p:focus {
+    outline: 2px solid green;
+}
+
+#pseudoclass-section p:hover {
+    font-style: italic;
+}
+
+#pseudoclass-section p:last-child:empty::before {
+    content: "This paragraph is empty!";
+    color: red;
+}
+
+#NestedList ul:only-child {
+    border: 2px solid brown;
+}
+
+.required-input:required:invalid {
+    border: 2px solid crimson;
+}
+
+:target {
+    background-color: yellow;
+    color: black;
+}
+
+.pseudo-class-checkbox:checked {
+    background-color: lightyellow;
+}
+
+.pseudo-class-link:link {
+    text-decoration: underline;
+    color: blue;
+}
+
+.pseudo-class-link:visited {
+    color: purple;
+}
+
+.pseudo-class-link:hover {
+    color: red;
+}
+
+.pseudo-class-link:active {
+    color: green;
+}
+
+#NestedList ul li:last-child {
+    background-color: lightgray;
+}
+
+#NestedList ul li:last-of-type {
+    font-weight: bold;
+    color: darkorange;
+}
+
+.pseudo-classes-demo p:nth-child(odd) {
+    background-color: lightblue;
+}
+
+.pseudo-classes-demo p:nth-child(even) {
+    background-color: lightcoral;
+}
+
+.only-child-demo:only-child {
+    border: 2px solid green;
+}
+
+.required-input-demo:required:invalid {
+    border: 2px solid crimson;
+}
+
+#target-demo:target #targeted-paragraph {
+    background-color: yellow;
+    color: black;
+}
