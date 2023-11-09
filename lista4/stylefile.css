@@ -330,3 +330,37 @@ li:hover {
     background-color: yellow;
     color: black;
 }
+
+/* Domyślne style dla wszystkich ekranów */
+body {
+    font-size: 16px;
+    color: black;
+    background-color: white;
+}
+
+/* Zmiana stylów dla ekranów o szerokości mniejszej niż 600px */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        color: white;
+        background-color: blue;
+    }
+}
+
+/* Zmiana stylów dla ekranów o szerokości między 601px a 1200px */
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+    body {
+        font-size: 18px;
+        color: black;
+        background-color: lightgray;
+    }
+}
+
+/* Zmiana stylów dla ekranów o szerokości większej niż 1200px */
+@media screen and (min-width: 1201px) {
+    body {
+        font-size: 20px;
+        color: black;
+        background-color: lightgreen;
+    }
+}
