@@ -59,6 +59,8 @@ p.important.message {
     background-color: cornsilk;
     font-size:large;
     font-weight: bold;
+    font-style:normal;  
+    font-variant:small-caps;
 }
 
 section > p {
