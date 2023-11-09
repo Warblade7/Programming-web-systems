@@ -1,5 +1,5 @@
 body {
-    background-image: url(website_background_springfield.png);
+    background-image: url(background.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left top;
@@ -70,7 +70,8 @@ section > p {
 .lorem_ipsum {
     width: 500px;
     height: 300px;
-    background-image: url(website_small_background_springfield.png);
+    background-image: url(wallpaper.png);
+    background-position: center;
     color: aliceblue;
     margin: 15pt;
 }
