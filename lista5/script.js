@@ -32,6 +32,8 @@ function greetUser() {
 const greetUserButton = document.getElementById("greetUserBtn");
 greetUserButton.addEventListener("click", greetUser);
 
+
+let sumOfNumbers = 0;
 // Funkcja sumująca dwie liczby
 function addNumbers() {
     const num1 = parseFloat(window.prompt("Podaj pierwszą liczbę:"));
@@ -40,6 +42,7 @@ function addNumbers() {
     if (!Number.isNaN(num1) && !Number.isNaN(num2)) {
         const sum = num1 + num2;
         window.alert("Suma: " + sum);
+        sumOfNumbers += sum;
     } else {
         window.alert("Wprowadź poprawne liczby!");
     }
@@ -49,11 +52,13 @@ function addNumbers() {
 const addNumbersButton = document.getElementById("addNumbersBtn");
 addNumbersButton.addEventListener("click", addNumbers);
 
+const parseIntButton = document.getElementById("parseIntBtn");
+parseIntButton.addEventListener("click", () => {
+    window.alert("Parsed Int: " + parseInt(sumOfNumbers));
+});
+
 // Funkcja wykonująca operacje z użyciem parseInt, while, do while, for, switch
 function performOperations() {
-    // Użycie parseInt
-    const intValue = parseInt("10");
-    window.alert("Parsed Int: " + intValue);
 
     // Użycie pętli while
     let i = 0;
@@ -88,9 +93,51 @@ function performOperations() {
     }
 }
 
+window.addEventListener("click", function() {
+    //window.alert("Kliknięto w okno a nie w przycisk!");
+});
+
 // Dodanie nasłuchiwania na zdarzenie kliknięcia przycisku
 const performOperationsButton = document.getElementById("performOperationsBtn");
 performOperationsButton.addEventListener("click", performOperations);
 
+var guessButton = document.getElementById('guessBtn');
+    var resultElement = document.getElementById('result');
+
+    guessButton.addEventListener('click', function() {
+
+        var randomNumber = parseInt(Math.floor(Math.random() * 100 )/10) + 1;
+
+
+        var attempts = 3;
+        var userGuess;
+
+
+        while (attempts > 0) {
+
+            userGuess = parseInt(prompt('Zgadnij liczbę od 1 do 10. Pozostałe próby: ' + attempts));
+
+            // Sprawdzenie, czy wartość jest liczbą
+            if (isNaN(userGuess)) {
+                alert('Podaj poprawną liczbę!');
+                continue;
+            }
+
+            if (userGuess === randomNumber) {
+                resultElement.textContent = 'Gratulacje! Odgadłeś liczbę!';
+                break;
+            } else {
+                alert(userGuess < randomNumber ? 'Za mała liczba!' : 'Za duża liczba!');
+                attempts--;
+            }
+        }
+
+        // Koniec gry
+        if (attempts === 0 && userGuess !== randomNumber) {
+            resultElement.textContent = 'Koniec gry. Wylosowana liczba to: ' + randomNumber;
+            guessButton.disabled = true;    
+        }
+    });
+
 // Wywołanie funkcji po załadowaniu strony
-document.writeln("Strona została załadowana.");
+document.writeln("Załadowana strona");
