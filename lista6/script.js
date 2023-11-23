@@ -70,3 +70,33 @@ function demoZTrybemScislym() {
         document.getElementById("wynik").textContent = "Błąd: " + e.message;
     }
 }
+
+function pokazInfoEvent(event) {
+    let info = "Typ zdarzenia: " + event.type;
+
+    // Sprawdź, czy właściwości są dostępne dla konkretnego typu zdarzenia
+    if (event.clientX !== undefined && event.clientY !== undefined) {
+        info += ", clientX: " + event.clientX +
+                ", clientY: " + event.clientY;
+    }
+
+    if (event.screenX !== undefined && event.screenY !== undefined) {
+        info += ", screenX: " + event.screenX +
+                ", screenY: " + event.screenY;
+    }
+
+    // Pozostałe właściwości
+    info += ", keyCode: " + event.keyCode +
+            ", altKey: " + event.altKey +
+            ", ctrlKey: " + event.ctrlKey +
+            ", shiftKey: " + event.shiftKey;
+
+    // Wyświetl informacje w elemencie "infoEvent"
+    document.getElementById("infoEvent").textContent = info;
+}
+
+// Dodanie nasłuchiwania zdarzeń myszy na obszarze testowym
+document.getElementById("obszarTestowy").addEventListener("mousemove", pokazInfoEvent);
+document.getElementById("obszarTestowy").addEventListener("mousedown", pokazInfoEvent);
+document.getElementById("obszarTestowy").addEventListener("mouseover", pokazInfoEvent);
+document.getElementById("obszarTestowy").addEventListener("mouseout", pokazInfoEvent);
