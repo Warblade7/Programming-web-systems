@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demonstracja JavaScript</title>
+</head>
+<body>
+
+    <h2>Demonstracja kolekcji JavaScript i zmiany stylów CSS</h2>
+
+    <!-- Przykładowe obrazy, linki, formularze, i kotwice -->
+    <img src="example1.jpg" alt="Przykładowy obraz 1">
+    <img src="example2.jpg" alt="Przykładowy obraz 2" id="secondImage">
+    <a href="https://www.nba.com/games" id="exampleLink">Link do strony z meczami NBA</a>
+    <form id="exampleForm">
+        <input type="text" name="exampleInput">
+    </form>
+    <a href="#exampleAnchor">Kotwica</a>
+
+    <!-- Kontrolki do zmiany stylów CSS -->
+    <div>
+        <label for="bgColor">Kolor tła:</label>
+        <input type="color" id="bgColor" onchange="zmienStyl('backgroundColor', this.value)">
+
+        <label for="textColor">Kolor tekstu:</label>
+        <input type="color" id="textColor" onchange="zmienStyl('color', this.value)">
+
+        <label for="fontType">Rodzaj czcionki:</label>
+        <select id="fontType" onchange="zmienStyl('fontFamily', this.value)">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+        </select>
+    </div>
+
+    <h2>Demonstracja właściwości obiektu event i zdarzeń formularza</h2>
+
+    <div id="obszarTestowy" style="width: 300px; height: 300px; border: 1px solid black;">
+        Testuj mysz tutaj
+    </div>
+
+    <p id="infoEvent">Informacje o zdarzeniu</p>
+
+    <form id="exampleForm">
+        <input type="text" name="exampleInput" placeholder="Focus/Blur na mnie">
+        <button type="submit">Wyślij</button>
+        <button type="reset">Resetuj</button>
+    </form>
+
+    <h2>Demonstracja Trybu Ścisłego (Strict Mode) w JavaScript</h2>
+
+    <button onclick="demoBezTrybuScislego()">Uruchom bez Trybu Ścisłego</button>
+    <button onclick="demoZTrybemScislym()">Uruchom z Trybem Ścisłym</button>
+
+    <p id="wynik"></p>  
+    <script src="skrypt.js"></script>
+</body>
+</html>
+
