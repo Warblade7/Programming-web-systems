@@ -36,21 +36,30 @@ function pokazInfoEvent(event) {
 }
 
 let input = document.querySelector("input[name='exampleInput']");
-input.addEventListener("focus", function() {
-    alert("Focus na polu tekstowym.");
-});
-input.addEventListener("blur", function() {
-    alert("Blur na polu tekstowym.");
+
+document.addEventListener("DOMContentLoaded", function() {
+    var inputElement = document.getElementsByName("exampleInput1")[0];
+    var infoElement = document.getElementById("exampleInput1Info");
+
+    inputElement.addEventListener("focus", function() {
+        infoElement.textContent = "Focus na pierwszym polu tekstowym.";
+    });
+
+    inputElement.addEventListener("blur", function() {
+        infoElement.textContent = "Blur na pierwszym polu tekstowym.";
+    });
+
+    document.getElementById("exampleForm1").addEventListener("submit", function(event) {
+        infoElement.textContent = "Formularz 1 został wysłany.";
+        event.preventDefault();
+    });
+
+    document.getElementById("exampleForm1").addEventListener("reset", function() {
+        infoElement.textContent = "Formularz 1 został zresetowany.";
+    });
 });
 
-document.getElementById("exampleForm").addEventListener("submit", function(event) {
-    alert("Formularz został wysłany.");
-    event.preventDefault(); // Zatrzymuje domyślne działanie, aby strona się nie przeładowała
-});
 
-document.getElementById("exampleForm").addEventListener("reset", function() {
-    alert("Formularz został zresetowany.");
-});
 
 function demoBezTrybuScislego() {
     try {
@@ -85,9 +94,13 @@ function pokazInfoEvent(event) {
                 ", screenY: " + event.screenY;
     }
 
+    // Użyj właściwości code zamiast keyCode
+    if (event.code !== undefined) {
+        info += ", code: " + event.code;
+    }
+
     // Pozostałe właściwości
-    info += ", keyCode: " + event.keyCode +
-            ", altKey: " + event.altKey +
+    info += ", altKey: " + event.altKey +
             ", ctrlKey: " + event.ctrlKey +
             ", shiftKey: " + event.shiftKey;
 
