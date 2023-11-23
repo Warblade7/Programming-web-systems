@@ -2,6 +2,11 @@
 <html>
 <head>
     <title>Demonstracja JavaScript</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
 
@@ -36,20 +41,27 @@
     </div>
 
     <h2>Demonstracja właściwości obiektu event i zdarzeń formularza</h2>
-
+    <div id="myElement">Przesuń mysz nad mną</div>
     <div id="obszarTestowy" style="width: 300px; height: 300px; border: 1px solid black;">
         Testuj mysz tutaj
     </div>
 
     <p id="infoEvent">Informacje o zdarzeniu</p>
 
-
-    <h2>Demonstracja Trybu Ścisłego (Strict Mode) w JavaScript</h2>
-
-    <button onclick="demoBezTrybuScislego()">Uruchom bez Trybu Ścisłego</button>
-    <button onclick="demoZTrybemScislym()">Uruchom z Trybem Ścisłym</button>
-
     <p id="wynik"></p>  
+
+    <ul id="numberedList">
+
+    </ul>
+
+    <button onclick="utworzElement()">Utwórz Element</button>
+    <button onclick="utworzTekst()">Utwórz Tekst</button>
+    <button onclick="dodajDoListy()">Dodaj do Listy</button>
+    <button onclick="wstawPrzed()">Wstaw Przed</button>
+    <button onclick="zastapElement()">Zastąp Element</button>
+    <button onclick="usunElement()">Usuń Element</button>
+    <button onclick="wyswietlParentNode()">Wyświetl parentNode</button>
+
     <script src="script.js"></script>
 </body>
 </html>
